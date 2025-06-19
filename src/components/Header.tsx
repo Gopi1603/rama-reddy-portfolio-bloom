@@ -9,7 +9,6 @@ const Header = () => {
   const { theme, toggleTheme } = useTheme();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
 
   const navItems = [
     { path: '/', label: 'Home', icon: Home },
@@ -19,15 +18,6 @@ const Header = () => {
     { path: '/certifications', label: 'Certifications', icon: Book },
     { path: '/contact', label: 'Contact', icon: Contact },
   ];
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
 
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -42,17 +32,10 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <header 
-      className={`sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 transition-all duration-300 ${
-        isScrolled ? 'shadow-sm' : ''
-      }`}
-    >
+    <header className="sticky top-0 z-50 w-full border-b bg-background">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link 
-          to="/" 
-          className="flex items-center space-x-2 hover:opacity-80 transition-all duration-300 hover:scale-105"
-        >
-          <div className="font-bold text-xl text-primary">PKRR</div>
+        <Link to="/" className="font-bold text-xl text-primary">
+          PKRR
         </Link>
 
         {/* Desktop Navigation */}
@@ -61,9 +44,9 @@ const Header = () => {
             <Link
               key={path}
               to={path}
-              className={`nav-link flex items-center space-x-2 text-sm font-medium px-3 py-2 rounded-md ${
+              className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 ${
                 location.pathname === path
-                  ? 'text-primary active'
+                  ? 'text-primary border-b-2 border-primary'
                   : 'text-muted-foreground hover:text-foreground'
               }`}
             >
@@ -73,26 +56,24 @@ const Header = () => {
           ))}
         </nav>
 
-        {/* Theme Toggle */}
         <div className="flex items-center space-x-3">
           <Button
             variant="ghost"
             size="sm"
             onClick={toggleTheme}
-            className="h-9 w-9 p-0 hover:bg-accent transition-all duration-300 hover:scale-110"
+            className="h-9 w-9 p-0"
           >
             {theme === 'light' ? (
-              <Moon className="h-4 w-4 transition-transform duration-300" />
+              <Moon className="h-4 w-4" />
             ) : (
-              <Sun className="h-4 w-4 transition-transform duration-300" />
+              <Sun className="h-4 w-4" />
             )}
           </Button>
 
-          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="sm"
-            className="lg:hidden h-9 w-9 p-0 hover:bg-accent transition-all duration-300"
+            className="lg:hidden h-9 w-9 p-0"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
@@ -105,36 +86,33 @@ const Header = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div 
-        className={`lg:hidden fixed inset-0 top-16 z-40 transform transition-transform duration-300 ease-in-out ${
-          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-        }`}
-      >
-        <div className="bg-background/95 backdrop-blur h-full border-l border-border">
-          <nav className="p-6 space-y-2">
-            {navItems.map(({ path, label, icon: Icon }, index) => (
-              <Link
-                key={path}
-                to={path}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg text-base font-medium transition-all duration-300 hover:bg-accent animate-slide-in-right ${
-                  location.pathname === path
-                    ? 'bg-accent text-primary'
-                    : 'text-muted-foreground hover:text-foreground'
-                }`}
-                style={{ animationDelay: `${index * 50}ms` }}
-              >
-                <Icon className="h-5 w-5" />
-                <span>{label}</span>
-              </Link>
-            ))}
-          </nav>
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 top-16 z-40">
+          <div className="bg-background h-full border-l">
+            <nav className="p-6 space-y-2">
+              {navItems.map(({ path, label, icon: Icon }) => (
+                <Link
+                  key={path}
+                  to={path}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className={`flex items-center space-x-3 px-4 py-3 text-base font-medium ${
+                    location.pathname === path
+                      ? 'bg-secondary text-primary'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                  }`}
+                >
+                  <Icon className="h-5 w-5" />
+                  <span>{label}</span>
+                </Link>
+              ))}
+            </nav>
+          </div>
+          <div 
+            className="absolute inset-0 bg-black/20 -z-10"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
         </div>
-        <div 
-          className="absolute inset-0 bg-black/20 -z-10"
-          onClick={() => setIsMobileMenuOpen(false)}
-        />
-      </div>
+      )}
     </header>
   );
 };
