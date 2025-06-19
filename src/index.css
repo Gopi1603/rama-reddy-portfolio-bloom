@@ -13,18 +13,17 @@
     --popover-foreground: 0 0 0;
     --primary: 0 0 0;
     --primary-foreground: 255 255 255;
-    --secondary: 245 245 245;
+    --secondary: 255 255 255;
     --secondary-foreground: 0 0 0;
-    --muted: 245 245 245;
-    --muted-foreground: 115 115 115;
-    --accent: 245 245 245;
+    --muted: 255 255 255;
+    --muted-foreground: 0 0 0;
+    --accent: 255 255 255;
     --accent-foreground: 0 0 0;
     --destructive: 0 0 0;
     --destructive-foreground: 255 255 255;
-    --border: 229 229 229;
-    --input: 229 229 229;
+    --border: 0 0 0;
+    --input: 0 0 0;
     --ring: 0 0 0;
-    --radius: 0.375rem;
   }
 
   .dark {
@@ -36,16 +35,16 @@
     --popover-foreground: 255 255 255;
     --primary: 255 255 255;
     --primary-foreground: 0 0 0;
-    --secondary: 38 38 38;
+    --secondary: 0 0 0;
     --secondary-foreground: 255 255 255;
-    --muted: 38 38 38;
-    --muted-foreground: 163 163 163;
-    --accent: 38 38 38;
+    --muted: 0 0 0;
+    --muted-foreground: 255 255 255;
+    --accent: 0 0 0;
     --accent-foreground: 255 255 255;
     --destructive: 255 255 255;
     --destructive-foreground: 0 0 0;
-    --border: 38 38 38;
-    --input: 38 38 38;
+    --border: 255 255 255;
+    --input: 255 255 255;
     --ring: 255 255 255;
   }
 }
