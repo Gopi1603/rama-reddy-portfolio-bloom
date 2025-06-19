@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -20,21 +19,16 @@ const Header = () => {
   ];
 
   useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
-
+    document.body.style.overflow = isMobileMenuOpen ? 'hidden' : 'unset';
     return () => {
       document.body.style.overflow = 'unset';
     };
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background">
+    <header className="sticky top-0 z-50 w-full border-b bg-white text-black dark:bg-black dark:text-white">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="font-bold text-xl text-primary">
+        <Link to="/" className="font-bold text-xl">
           PKRR
         </Link>
 
@@ -46,8 +40,8 @@ const Header = () => {
               to={path}
               className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 ${
                 location.pathname === path
-                  ? 'text-primary border-b-2 border-primary'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'border-b-2 border-black dark:border-white'
+                  : 'text-gray-600 hover:text-black dark:text-gray-400 dark:hover:text-white'
               }`}
             >
               <Icon className="h-4 w-4" />
@@ -88,7 +82,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
         <div className="lg:hidden fixed inset-0 top-16 z-40">
-          <div className="bg-background h-full border-l">
+          <div className="bg-white dark:bg-black h-full border-t border-gray-300 dark:border-gray-700">
             <nav className="p-6 space-y-2">
               {navItems.map(({ path, label, icon: Icon }) => (
                 <Link
@@ -97,8 +91,8 @@ const Header = () => {
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={`flex items-center space-x-3 px-4 py-3 text-base font-medium ${
                     location.pathname === path
-                      ? 'bg-secondary text-primary'
-                      : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
+                      ? 'bg-black text-white dark:bg-white dark:text-black'
+                      : 'text-gray-600 hover:text-black hover:bg-gray-100 dark:text-gray-300 dark:hover:text-white dark:hover:bg-neutral-800'
                   }`}
                 >
                   <Icon className="h-5 w-5" />
@@ -107,7 +101,7 @@ const Header = () => {
               ))}
             </nav>
           </div>
-          <div 
+          <div
             className="absolute inset-0 bg-black/20 -z-10"
             onClick={() => setIsMobileMenuOpen(false)}
           />
