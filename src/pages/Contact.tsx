@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
+import { Mail, Phone, MapPin, Linkedin, Github, Download } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -22,29 +23,44 @@ const Contact = () => {
             <CardTitle>Contact Information</CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div>
-              <h4 className="font-medium">Email</h4>
-              <p className="text-muted-foreground">// Add email address</p>
+            <div className="flex items-center gap-3">
+              <Mail className="h-4 w-4 text-muted-foreground" />
+              <div>
+                <h4 className="font-medium">Email</h4>
+                <p className="text-muted-foreground">pedavitiramakrihsna@gmail.com</p>
+              </div>
             </div>
             
-            <div>
-              <h4 className="font-medium">Phone</h4>
-              <p className="text-muted-foreground">// Add phone number</p>
+            <div className="flex items-center gap-3">
+              <Phone className="h-4 w-4 text-muted-foreground" />
+              <div>
+                <h4 className="font-medium">Phone</h4>
+                <p className="text-muted-foreground">+91 XXXXX XXXXX</p>
+              </div>
             </div>
             
-            <div>
-              <h4 className="font-medium">Location</h4>
-              <p className="text-muted-foreground">// Add location</p>
+            <div className="flex items-center gap-3">
+              <MapPin className="h-4 w-4 text-muted-foreground" />
+              <div>
+                <h4 className="font-medium">Location</h4>
+                <p className="text-muted-foreground">India</p>
+              </div>
             </div>
             
-            <div>
-              <h4 className="font-medium">LinkedIn</h4>
-              <p className="text-muted-foreground">// Add LinkedIn profile</p>
+            <div className="flex items-center gap-3">
+              <Linkedin className="h-4 w-4 text-muted-foreground" />
+              <div>
+                <h4 className="font-medium">LinkedIn</h4>
+                <p className="text-muted-foreground">linkedin.com/in/pedaviti-rama-krishna</p>
+              </div>
             </div>
             
-            <div>
-              <h4 className="font-medium">GitHub</h4>
-              <p className="text-muted-foreground">// Add GitHub profile</p>
+            <div className="flex items-center gap-3">
+              <Github className="h-4 w-4 text-muted-foreground" />
+              <div>
+                <h4 className="font-medium">GitHub</h4>
+                <p className="text-muted-foreground">github.com/pedavitiramakrihsna</p>
+              </div>
             </div>
           </CardContent>
         </Card>
@@ -100,15 +116,24 @@ const Contact = () => {
         <CardContent>
           <div className="text-center space-y-4">
             <p className="text-muted-foreground">
-              I'm always interested in new opportunities, collaborations, and connections. 
-              Whether you have a project in mind, want to discuss Salesforce or Python development, 
-              or just want to network, I'd love to hear from you.
+              I'm actively seeking opportunities in Salesforce Administration and Python Development. 
+              Whether you have a project in mind, want to discuss technical solutions, 
+              or are looking for a dedicated team member, I'd love to hear from you.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline">Download Resume</Button>
-              <Button variant="outline">View LinkedIn</Button>
-              <Button variant="outline">GitHub Profile</Button>
+              <Button variant="outline" className="flex items-center gap-2">
+                <Download className="h-4 w-4" />
+                Download Resume
+              </Button>
+              <Button variant="outline" className="flex items-center gap-2">
+                <Linkedin className="h-4 w-4" />
+                View LinkedIn
+              </Button>
+              <Button variant="outline" className="flex items-center gap-2">
+                <Github className="h-4 w-4" />
+                GitHub Profile
+              </Button>
             </div>
           </div>
         </CardContent>

@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { Briefcase, Star, Contact } from 'lucide-react';
+import { Briefcase, User, Contact } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -11,10 +11,10 @@ const Home = () => {
       {/* Hero Section */}
       <section className="text-center space-y-8 py-16 lg:py-20">
         <div className="space-y-6 max-w-4xl mx-auto">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-foreground leading-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
             Pedaviti Rama Krishna Reddy
           </h1>
-          <p className="text-xl md:text-2xl lg:text-3xl text-primary font-medium">
+          <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground font-medium">
             Aspiring Salesforce Admin & Python Developer
           </p>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
@@ -41,7 +41,7 @@ const Home = () => {
 
       {/* Quick Overview Cards */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
-        <Card className="text-center hover:shadow-lg transition-shadow duration-200 border-border">
+        <Card className="text-center hover:shadow-lg transition-shadow duration-200">
           <CardContent className="p-8">
             <div className="text-3xl mb-4">⚡</div>
             <h3 className="text-xl font-semibold mb-3 text-foreground">Salesforce Admin</h3>
@@ -51,7 +51,7 @@ const Home = () => {
           </CardContent>
         </Card>
 
-        <Card className="text-center hover:shadow-lg transition-shadow duration-200 border-border">
+        <Card className="text-center hover:shadow-lg transition-shadow duration-200">
           <CardContent className="p-8">
             <div className="text-3xl mb-4">🐍</div>
             <h3 className="text-xl font-semibold mb-3 text-foreground">Python Developer</h3>
@@ -61,7 +61,7 @@ const Home = () => {
           </CardContent>
         </Card>
 
-        <Card className="text-center hover:shadow-lg transition-shadow duration-200 border-border">
+        <Card className="text-center hover:shadow-lg transition-shadow duration-200">
           <CardContent className="p-8">
             <div className="text-3xl mb-4">🚀</div>
             <h3 className="text-xl font-semibold mb-3 text-foreground">Problem Solver</h3>
@@ -73,7 +73,7 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="text-center bg-accent/30 rounded-2xl p-10 lg:p-12 border border-border">
+      <section className="text-center bg-secondary/50 rounded-2xl p-10 lg:p-12">
         <h2 className="text-2xl lg:text-3xl font-semibold mb-6 text-foreground">Ready to Collaborate?</h2>
         <p className="text-muted-foreground mb-8 max-w-2xl mx-auto text-lg leading-relaxed">
           I'm actively seeking opportunities to apply my skills in Salesforce administration 
@@ -81,7 +81,7 @@ const Home = () => {
         </p>
         <Button asChild size="lg" className="px-8 py-3 text-base font-medium">
           <Link to="/about">
-            <Star className="mr-2 h-5 w-5" />
+            <User className="mr-2 h-5 w-5" />
             Learn More About Me
           </Link>
         </Button>
