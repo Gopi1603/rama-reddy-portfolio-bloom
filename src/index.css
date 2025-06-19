@@ -57,10 +57,12 @@
     scroll-behavior: smooth;
   }
 
-  body {
-    @apply bg-background text-foreground;
-    font-family: system-ui, -apple-system, sans-serif;
-  }
+ body {
+  background-color: white !important;
+  color: black !important;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+
 
   h1, h2, h3, h4, h5, h6 {
     @apply font-semibold;
