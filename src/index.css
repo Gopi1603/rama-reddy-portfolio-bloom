@@ -65,7 +65,7 @@
     color: white !important;
   }
 
-  /* Force all text elements and colors to be black/white only */
+  /* GLOBAL COLOR ENFORCEMENT - NO EXCEPTIONS */
   *, *::before, *::after {
     border-color: black !important;
   }
@@ -74,25 +74,27 @@
     border-color: white !important;
   }
 
-  /* Force all text to be black in light mode, white in dark mode */
-  h1, h2, h3, h4, h5, h6, p, span, div, a, label, button, li, input, textarea {
+  /* FORCE ALL TEXT TO BE BLACK/WHITE ONLY */
+  h1, h2, h3, h4, h5, h6, p, span, div, a, label, button, li, input, textarea, svg {
     color: black !important;
   }
 
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, 
-  .dark p, .dark span, .dark div, .dark a, .dark label, .dark button, .dark li, .dark input, .dark textarea {
+  .dark p, .dark span, .dark div, .dark a, .dark label, .dark button, .dark li, .dark input, .dark textarea, .dark svg {
     color: white !important;
   }
 
-  /* Completely eliminate ALL colored backgrounds and text */
+  /* ELIMINATE ALL YELLOW/COLORED BACKGROUNDS AND TEXT */
   .text-yellow-500, .text-yellow-600, .text-amber-500, .text-orange-500,
   .text-blue-500, .text-blue-600, .text-green-500, .text-green-600,
   .text-red-500, .text-red-600, .text-purple-500, .text-purple-600,
   .text-muted-foreground, .bg-yellow-500, .bg-yellow-600, .bg-amber-500,
   .bg-orange-500, .bg-blue-500, .bg-blue-600, .bg-green-500, .bg-green-600,
-  .bg-red-500, .bg-red-600, .bg-purple-500, .bg-purple-600 {
+  .bg-red-500, .bg-red-600, .bg-purple-500, .bg-purple-600,
+  .bg-secondary, .bg-primary, .bg-accent, .bg-destructive {
     background-color: white !important;
     color: black !important;
+    border-color: black !important;
   }
 
   .dark .text-yellow-500, .dark .text-yellow-600, .dark .text-amber-500, .dark .text-orange-500,
@@ -100,34 +102,53 @@
   .dark .text-red-500, .dark .text-red-600, .dark .text-purple-500, .dark .text-purple-600,
   .dark .text-muted-foreground, .dark .bg-yellow-500, .dark .bg-yellow-600, .dark .bg-amber-500,
   .dark .bg-orange-500, .dark .bg-blue-500, .dark .bg-blue-600, .dark .bg-green-500, .dark .bg-green-600,
-  .dark .bg-red-500, .dark .bg-red-600, .dark .bg-purple-500, .dark .bg-purple-600 {
+  .dark .bg-red-500, .dark .bg-red-600, .dark .bg-purple-500, .dark .bg-purple-600,
+  .dark .bg-secondary, .dark .bg-primary, .dark .bg-accent, .dark .bg-destructive {
     background-color: black !important;
     color: white !important;
+    border-color: white !important;
   }
 
-  /* Force all background colors to be white/black only */
-  .bg-gray-100, .bg-gray-200, .bg-gray-300, .bg-gray-50 {
+  /* FORCE ALL BACKGROUND COLORS TO BE WHITE/BLACK ONLY */
+  .bg-gray-100, .bg-gray-200, .bg-gray-300, .bg-gray-50, .bg-muted {
     background-color: white !important;
+    color: black !important;
+    border-color: black !important;
   }
 
-  .dark .bg-gray-100, .dark .bg-gray-200, .dark .bg-gray-300, .dark .bg-gray-50 {
-    background-color: black !important;
-  }
-
-  /* Fix ALL button hover states - no exceptions */
-  button:hover, .hover\:bg-black:hover, .hover\:bg-white:hover,
-  a:hover, [role="button"]:hover {
+  .dark .bg-gray-100, .dark .bg-gray-200, .dark .bg-gray-300, .dark .bg-gray-50, .dark .bg-muted {
     background-color: black !important;
     color: white !important;
+    border-color: white !important;
+  }
+
+  /* FIX ALL BUTTON HOVER STATES - COMPLETE INVERSION */
+  button:hover, .hover\:bg-black:hover, .hover\:bg-white:hover,
+  a:hover, [role="button"]:hover, .btn:hover, input[type="submit"]:hover {
+    background-color: black !important;
+    color: white !important;
+    border-color: white !important;
   }
 
   .dark button:hover, .dark .hover\:bg-black:hover, .dark .hover\:bg-white:hover,
-  .dark a:hover, .dark [role="button"]:hover {
+  .dark a:hover, .dark [role="button"]:hover, .dark .btn:hover, .dark input[type="submit"]:hover {
     background-color: white !important;
+    color: black !important;
+    border-color: black !important;
+  }
+
+  /* FIX BUTTON HOVER TEXT AND ICONS */
+  button:hover *, .hover\:bg-black:hover *, .hover\:bg-white:hover *,
+  a:hover *, [role="button"]:hover *, .btn:hover * {
+    color: white !important;
+  }
+
+  .dark button:hover *, .dark .hover\:bg-black:hover *, .dark .hover\:bg-white:hover *,
+  .dark a:hover *, .dark [role="button"]:hover *, .dark .btn:hover * {
     color: black !important;
   }
 
-  /* Fix card hover states */
+  /* FIX CARD HOVER STATES */
   .hover\:bg-black:hover * {
     color: white !important;
   }
@@ -136,17 +157,103 @@
     color: black !important;
   }
 
-  /* Override any badge or component colors */
-  .bg-secondary, .bg-primary, [data-state="checked"] {
+  /* BADGE AND COMPONENT OVERRIDES */
+  [data-state="checked"], .badge, .Badge {
     background-color: white !important;
     color: black !important;
     border: 1px solid black !important;
   }
 
-  .dark .bg-secondary, .dark .bg-primary, .dark [data-state="checked"] {
+  .dark [data-state="checked"], .dark .badge, .dark .Badge {
     background-color: black !important;
     color: white !important;
     border: 1px solid white !important;
+  }
+
+  /* FORM INPUT FOCUS STATES - NO YELLOW RINGS */
+  input:focus, textarea:focus, select:focus {
+    outline: none !important;
+    border-color: black !important;
+    box-shadow: 0 0 0 1px black !important;
+    --tw-ring-color: black !important;
+  }
+
+  .dark input:focus, .dark textarea:focus, .dark select:focus {
+    border-color: white !important;
+    box-shadow: 0 0 0 1px white !important;
+    --tw-ring-color: white !important;
+  }
+
+  /* REMOVE ALL FOCUS RING COLORS */
+  .focus\:ring-yellow-500:focus, .focus\:ring-yellow-600:focus,
+  .focus\:ring-blue-500:focus, .focus\:ring-primary:focus,
+  .focus\:ring-accent:focus, .focus\:ring-destructive:focus {
+    --tw-ring-color: black !important;
+  }
+
+  .dark .focus\:ring-yellow-500:focus, .dark .focus\:ring-yellow-600:focus,
+  .dark .focus\:ring-blue-500:focus, .dark .focus\:ring-primary:focus,
+  .dark .focus\:ring-accent:focus, .dark .focus\:ring-destructive:focus {
+    --tw-ring-color: white !important;
+  }
+
+  /* NAV MENU ITEMS - DESKTOP AND MOBILE */
+  nav a, nav button, .nav-item, .menu-item {
+    color: black !important;
+    background-color: transparent !important;
+  }
+
+  .dark nav a, .dark nav button, .dark .nav-item, .dark .menu-item {
+    color: white !important;
+    background-color: transparent !important;
+  }
+
+  nav a:hover, nav button:hover, .nav-item:hover, .menu-item:hover {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  .dark nav a:hover, .dark nav button:hover, .dark .nav-item:hover, .dark .menu-item:hover {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* MOBILE MENU SPECIFIC FIXES */
+  .mobile-menu, .mobile-nav {
+    background-color: white !important;
+    border-color: black !important;
+  }
+
+  .dark .mobile-menu, .dark .mobile-nav {
+    background-color: black !important;
+    border-color: white !important;
+  }
+
+  .mobile-menu a, .mobile-nav a, .mobile-menu button, .mobile-nav button {
+    color: black !important;
+  }
+
+  .dark .mobile-menu a, .dark .mobile-nav a, .dark .mobile-menu button, .dark .mobile-nav button {
+    color: white !important;
+  }
+
+  .mobile-menu a:hover, .mobile-nav a:hover, .mobile-menu button:hover, .mobile-nav button:hover {
+    background-color: black !important;
+    color: white !important;
+  }
+
+  .dark .mobile-menu a:hover, .dark .mobile-nav a:hover, .dark .mobile-menu button:hover, .dark .mobile-nav button:hover {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  /* ICONS IN HOVER STATES */
+  button:hover svg, a:hover svg, [role="button"]:hover svg {
+    color: white !important;
+  }
+
+  .dark button:hover svg, .dark a:hover svg, .dark [role="button"]:hover svg {
+    color: black !important;
   }
 
   /* Animations */

@@ -27,9 +27,9 @@ const Header = () => {
   }, [isMobileMenuOpen]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-black dark:border-white bg-white dark:bg-black">
+    <header className="sticky top-0 z-50 w-full border-b !border-black dark:!border-white !bg-white dark:!bg-black">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link to="/" className="font-bold text-xl text-black dark:text-white hover:opacity-70 transition-opacity">
+        <Link to="/" className="font-bold text-xl !text-black dark:!text-white hover:opacity-70 transition-opacity">
           PKRR
         </Link>
 
@@ -39,14 +39,14 @@ const Header = () => {
             <Link
               key={path}
               to={path}
-              className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 text-black dark:text-white hover:opacity-70 transition-opacity ${
+              className={`flex items-center space-x-2 text-sm font-medium px-3 py-2 !text-black dark:!text-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors ${
                 location.pathname === path
-                  ? 'border-b-2 border-black dark:border-white'
+                  ? 'border-b-2 !border-black dark:!border-white'
                   : ''
               }`}
             >
-              <Icon className="h-4 w-4 text-black dark:text-white" />
-              <span className="text-black dark:text-white">{label}</span>
+              <Icon className="h-4 w-4 !text-black dark:!text-white" />
+              <span className="!text-black dark:!text-white">{label}</span>
             </Link>
           ))}
         </nav>
@@ -56,25 +56,25 @@ const Header = () => {
             variant="ghost"
             size="sm"
             onClick={toggleTheme}
-            className="h-9 w-9 p-0 text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+            className="h-9 w-9 p-0 !text-black dark:!text-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors"
           >
             {theme === 'light' ? (
-              <Moon className="h-4 w-4 text-black dark:text-white" />
+              <Moon className="h-4 w-4 !text-black dark:!text-white" />
             ) : (
-              <Sun className="h-4 w-4 text-black dark:text-white" />
+              <Sun className="h-4 w-4 !text-black dark:!text-white" />
             )}
           </Button>
 
           <Button
             variant="ghost"
             size="sm"
-            className="lg:hidden h-9 w-9 p-0 text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+            className="lg:hidden h-9 w-9 p-0 !text-black dark:!text-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
             {isMobileMenuOpen ? (
-              <X className="h-4 w-4 text-black dark:text-white" />
+              <X className="h-4 w-4 !text-black dark:!text-white" />
             ) : (
-              <Menu className="h-4 w-4 text-black dark:text-white" />
+              <Menu className="h-4 w-4 !text-black dark:!text-white" />
             )}
           </Button>
         </div>
@@ -82,22 +82,22 @@ const Header = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 top-16 z-40">
-          <div className="bg-white dark:bg-black h-full border-t border-black dark:border-white">
-            <nav className="p-6 space-y-2">
+        <div className="lg:hidden fixed inset-0 top-16 z-40 mobile-menu">
+          <div className="!bg-white dark:!bg-black h-full border-t !border-black dark:!border-white">
+            <nav className="p-6 space-y-2 mobile-nav">
               {navItems.map(({ path, label, icon: Icon }) => (
                 <Link
                   key={path}
                   to={path}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center space-x-3 px-4 py-3 text-base font-medium text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors ${
+                  className={`flex items-center space-x-3 px-4 py-3 text-base font-medium rounded transition-colors menu-item ${
                     location.pathname === path
-                      ? 'bg-black text-white dark:bg-white dark:text-black'
-                      : ''
+                      ? '!bg-black !text-white dark:!bg-white dark:!text-black'
+                      : '!bg-transparent !text-black dark:!text-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black'
                   }`}
                 >
-                  <Icon className="h-5 w-5 text-black dark:text-white" />
-                  <span className="text-black dark:text-white">{label}</span>
+                  <Icon className="h-5 w-5" />
+                  <span>{label}</span>
                 </Link>
               ))}
             </nav>
