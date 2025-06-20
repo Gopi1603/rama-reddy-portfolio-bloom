@@ -50,10 +50,6 @@
 }
 
 @layer base {
-  * {
-    border-color: hsl(var(--border)) !important;
-  }
-
   html {
     scroll-behavior: smooth;
   }
@@ -69,106 +65,88 @@
     color: white !important;
   }
 
-  /* Force all text elements to follow theme colors */
-  h1, h2, h3, h4, h5, h6, p, span, div, a, label, button, li {
+  /* Force all text elements and colors to be black/white only */
+  *, *::before, *::after {
+    border-color: black !important;
+  }
+
+  .dark *, .dark *::before, .dark *::after {
+    border-color: white !important;
+  }
+
+  /* Force all text to be black in light mode, white in dark mode */
+  h1, h2, h3, h4, h5, h6, p, span, div, a, label, button, li, input, textarea {
     color: black !important;
   }
 
   .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, 
-  .dark p, .dark span, .dark div, .dark a, .dark label, .dark button, .dark li {
+  .dark p, .dark span, .dark div, .dark a, .dark label, .dark button, .dark li, .dark input, .dark textarea {
     color: white !important;
   }
 
-  /* Force override any colored elements */
-  .text-yellow-500,
-  .text-yellow-600,
-  .text-amber-500,
-  .text-orange-500,
-  .text-blue-500,
-  .text-blue-600,
-  .text-green-500,
-  .text-green-600,
-  .text-red-500,
-  .text-red-600,
-  .text-purple-500,
-  .text-purple-600,
-  .text-muted-foreground {
+  /* Completely eliminate ALL colored backgrounds and text */
+  .text-yellow-500, .text-yellow-600, .text-amber-500, .text-orange-500,
+  .text-blue-500, .text-blue-600, .text-green-500, .text-green-600,
+  .text-red-500, .text-red-600, .text-purple-500, .text-purple-600,
+  .text-muted-foreground, .bg-yellow-500, .bg-yellow-600, .bg-amber-500,
+  .bg-orange-500, .bg-blue-500, .bg-blue-600, .bg-green-500, .bg-green-600,
+  .bg-red-500, .bg-red-600, .bg-purple-500, .bg-purple-600 {
+    background-color: white !important;
     color: black !important;
   }
 
-  .dark .text-yellow-500,
-  .dark .text-yellow-600,
-  .dark .text-amber-500,
-  .dark .text-orange-500,
-  .dark .text-blue-500,
-  .dark .text-blue-600,
-  .dark .text-green-500,
-  .dark .text-green-600,
-  .dark .text-red-500,
-  .dark .text-red-600,
-  .dark .text-purple-500,
-  .dark .text-purple-600,
-  .dark .text-muted-foreground {
+  .dark .text-yellow-500, .dark .text-yellow-600, .dark .text-amber-500, .dark .text-orange-500,
+  .dark .text-blue-500, .dark .text-blue-600, .dark .text-green-500, .dark .text-green-600,
+  .dark .text-red-500, .dark .text-red-600, .dark .text-purple-500, .dark .text-purple-600,
+  .dark .text-muted-foreground, .dark .bg-yellow-500, .dark .bg-yellow-600, .dark .bg-amber-500,
+  .dark .bg-orange-500, .dark .bg-blue-500, .dark .bg-blue-600, .dark .bg-green-500, .dark .bg-green-600,
+  .dark .bg-red-500, .dark .bg-red-600, .dark .bg-purple-500, .dark .bg-purple-600 {
+    background-color: black !important;
     color: white !important;
   }
 
-  .bg-yellow-500,
-  .bg-yellow-600,
-  .bg-amber-500,
-  .bg-orange-500,
-  .bg-blue-500,
-  .bg-blue-600,
-  .bg-green-500,
-  .bg-green-600,
-  .bg-red-500,
-  .bg-red-600,
-  .bg-purple-500,
-  .bg-purple-600 {
+  /* Force all background colors to be white/black only */
+  .bg-gray-100, .bg-gray-200, .bg-gray-300, .bg-gray-50 {
     background-color: white !important;
   }
 
-  .dark .bg-yellow-500,
-  .dark .bg-yellow-600,
-  .dark .bg-amber-500,
-  .dark .bg-orange-500,
-  .dark .bg-blue-500,
-  .dark .bg-blue-600,
-  .dark .bg-green-500,
-  .dark .bg-green-600,
-  .dark .bg-red-500,
-  .dark .bg-red-600,
-  .dark .bg-purple-500,
-  .dark .bg-purple-600 {
+  .dark .bg-gray-100, .dark .bg-gray-200, .dark .bg-gray-300, .dark .bg-gray-50 {
     background-color: black !important;
   }
 
-  /* Force all backgrounds to be theme appropriate */
-  .bg-gray-100,
-  .bg-gray-200,
-  .bg-gray-300 {
-    background-color: white !important;
-  }
-
-  .dark .bg-gray-100,
-  .dark .bg-gray-200,
-  .dark .bg-gray-300 {
+  /* Fix ALL button hover states - no exceptions */
+  button:hover, .hover\:bg-black:hover, .hover\:bg-white:hover,
+  a:hover, [role="button"]:hover {
     background-color: black !important;
-  }
-
-  /* Fix button hover states */
-  button:hover {
     color: white !important;
-    background-color: black !important;
   }
 
-  .dark button:hover {
+  .dark button:hover, .dark .hover\:bg-black:hover, .dark .hover\:bg-white:hover,
+  .dark a:hover, .dark [role="button"]:hover {
+    background-color: white !important;
     color: black !important;
-    background-color: white !important;
   }
 
-  /* Fix link hover states */
-  a:hover {
-    opacity: 0.7;
+  /* Fix card hover states */
+  .hover\:bg-black:hover * {
+    color: white !important;
+  }
+
+  .dark .hover\:bg-white:hover * {
+    color: black !important;
+  }
+
+  /* Override any badge or component colors */
+  .bg-secondary, .bg-primary, [data-state="checked"] {
+    background-color: white !important;
+    color: black !important;
+    border: 1px solid black !important;
+  }
+
+  .dark .bg-secondary, .dark .bg-primary, .dark [data-state="checked"] {
+    background-color: black !important;
+    color: white !important;
+    border: 1px solid white !important;
   }
 
   /* Animations */

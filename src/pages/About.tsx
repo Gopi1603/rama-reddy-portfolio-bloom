@@ -11,7 +11,7 @@ const About = () => {
         <p className="text-lg text-black dark:text-white">
           Passionate about technology and continuous learning
         </p>
-        <Button asChild variant="outline" size="lg" className="border-black text-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+        <Button asChild variant="outline" size="lg" className="!bg-white !border !border-black !text-black hover:!bg-black hover:!text-white dark:!bg-black dark:!border-white dark:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors">
           <a href="/resume.pdf" download="Rama_Krishna_Reddy_Resume.pdf">
             <Download className="mr-2 h-5 w-5" />
             Download CV
