@@ -223,18 +223,33 @@ const Contact = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="outline" className="flex items-center gap-2 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                <Download className="h-4 w-4" />
-                Download Resume
-              </Button>
-              <Button variant="outline" className="flex items-center gap-2 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                <Linkedin className="h-4 w-4" />
-                View LinkedIn
-              </Button>
-              <Button variant="outline" className="flex items-center gap-2 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
-                <Github className="h-4 w-4" />
-                GitHub Profile
-              </Button>
+              <Button
+  variant="outline"
+  className="flex items-center gap-2 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+  onClick={() => window.open('https://drive.google.com/file/d/1v9vitlUacvuvqeJTv9Vvg6wNMZed5MaN/view?usp=sharing', '_blank')}
+>
+  <Download className="h-4 w-4" />
+  Download Resume
+</Button>
+
+              <Button
+  variant="outline"
+  className="flex items-center gap-2 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+  onClick={() => window.open('https://www.linkedin.com/in/rama-krishna-reddy-717b82248/', '_blank')}
+>
+  <Linkedin className="h-4 w-4" />
+  View LinkedIn
+</Button>
+
+              <Button
+  variant="outline"
+  className="flex items-center gap-2 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
+  onClick={() => window.open('https://github.com/Ramakrishna18code', '_blank')}
+>
+  <Github className="h-4 w-4" />
+  GitHub Profile
+</Button>
+
             </div>
           </div>
         </CardContent>
