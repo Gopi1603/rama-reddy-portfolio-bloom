@@ -19,22 +19,23 @@ const About = () => {
         </Button>
       </div>
 
-      <Card className="bg-white dark:bg-black border-black dark:border-white animate-slide-in-right animation-delay-100">
-        <CardHeader>
-          <CardTitle className="text-black dark:text-white">Professional Summary</CardTitle>
-        </CardHeader>
-        <CardContent className="space-y-4">
-          <p className="text-black dark:text-white leading-relaxed">
-            I am an aspiring Salesforce Administrator and Python Developer with a strong foundation in technology 
-            and a passion for creating efficient solutions. Currently pursuing opportunities to apply my skills 
-            in CRM administration, automation, and software development.
-          </p>
-          <p className="text-black dark:text-white leading-relaxed">
-            My goal is to leverage technology to streamline business processes and contribute to organizational 
-            growth through effective Salesforce administration and Python development projects.
-          </p>
-        </CardContent>
-      </Card>
+<Card className="bg-white dark:bg-black border-black dark:border-white animate-slide-in-right animation-delay-100">
+  <CardHeader>
+    <CardTitle className="text-black dark:text-white">Professional Summary</CardTitle>
+  </CardHeader>
+  <CardContent className="space-y-4">
+    <p className="text-black dark:text-white leading-relaxed">
+      I am an aspiring Salesforce Administrator and Frontend Developer with a strong foundation in technology 
+      and a passion for creating seamless digital experiences. I specialize in building responsive user interfaces 
+      and optimizing CRM workflows to enhance business efficiency.
+    </p>
+    <p className="text-black dark:text-white leading-relaxed">
+      My goal is to leverage my skills in frontend development and Salesforce administration to deliver 
+      high-impact solutions that improve user engagement and streamline business operations.
+    </p>
+  </CardContent>
+</Card>
+
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-fade-in-up animation-delay-200">
         <Card className="bg-white dark:bg-black border-black dark:border-white">
@@ -53,13 +54,42 @@ const About = () => {
                 </h4>
                 <p className="text-sm text-black dark:text-white">Computer Science Graduate</p>
               </div>
-              <div>
-                <h4 className="font-medium flex items-center gap-2 mb-2 text-black dark:text-white">
-                  <MapPin className="h-4 w-4" />
-                  Location
-                </h4>
-                <p className="text-sm text-black dark:text-white">India</p>
-              </div>
+             <div>
+  <h4 className="font-medium flex items-center gap-2 mb-2 text-black dark:text-white">
+    <MapPin className="h-4 w-4" />
+    Location
+  </h4>
+  <p className="text-sm text-black dark:text-white flex items-center gap-2">
+    Swarna Bharathi Institute of Science & Technology
+    <a
+      href="https://www.sbit.ac.in/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 dark:text-blue-400 hover:underline flex items-center"
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth={2}
+        stroke="currentColor"
+        className="h-4 w-4"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M13.5 4.5H19.5V10.5M19.5 4.5L10.5 13.5"
+        />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4.5 19.5H10.5V13.5"
+        />
+      </svg>
+    </a>
+  </p>
+</div>
+
               <div>
                 <h4 className="font-medium flex items-center gap-2 mb-2 text-black dark:text-white">
                   <Languages className="h-4 w-4" />
@@ -80,7 +110,7 @@ const About = () => {
               <div>
                 <h4 className="font-medium mb-2 text-black dark:text-white">Professional Interests</h4>
                 <p className="text-sm text-black dark:text-white">
-                  Salesforce Administration, Python Development, Automation, Data Management
+                  Salesforce Administration, Frontend Development, Automation, Data Management
                 </p>
               </div>
               <div>
