@@ -30,7 +30,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full border-b !border-black dark:!border-white !bg-white dark:!bg-black">
       <div className="container flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="font-bold text-xl !text-black dark:!text-white hover:opacity-70 transition-opacity">
-          PKRR
+          RK
         </Link>
 
         {/* Desktop Navigation */}
