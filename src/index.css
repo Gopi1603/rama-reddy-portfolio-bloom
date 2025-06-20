@@ -59,14 +59,24 @@
   }
 
   body {
-    background-color: hsl(var(--background)) !important;
-    color: hsl(var(--foreground)) !important;
+    background-color: white !important;
+    color: black !important;
     font-family: system-ui, -apple-system, sans-serif;
   }
 
+  .dark body {
+    background-color: black !important;
+    color: white !important;
+  }
+
   /* Force all text elements to follow theme colors */
-  h1, h2, h3, h4, h5, h6, p, span, div, a, label, button {
-    color: hsl(var(--foreground)) !important;
+  h1, h2, h3, h4, h5, h6, p, span, div, a, label, button, li {
+    color: black !important;
+  }
+
+  .dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6, 
+  .dark p, .dark span, .dark div, .dark a, .dark label, .dark button, .dark li {
+    color: white !important;
   }
 
   /* Force override any colored elements */
@@ -82,6 +92,26 @@
   .text-red-600,
   .text-purple-500,
   .text-purple-600,
+  .text-muted-foreground {
+    color: black !important;
+  }
+
+  .dark .text-yellow-500,
+  .dark .text-yellow-600,
+  .dark .text-amber-500,
+  .dark .text-orange-500,
+  .dark .text-blue-500,
+  .dark .text-blue-600,
+  .dark .text-green-500,
+  .dark .text-green-600,
+  .dark .text-red-500,
+  .dark .text-red-600,
+  .dark .text-purple-500,
+  .dark .text-purple-600,
+  .dark .text-muted-foreground {
+    color: white !important;
+  }
+
   .bg-yellow-500,
   .bg-yellow-600,
   .bg-amber-500,
@@ -94,15 +124,51 @@
   .bg-red-600,
   .bg-purple-500,
   .bg-purple-600 {
-    color: hsl(var(--foreground)) !important;
-    background-color: transparent !important;
+    background-color: white !important;
+  }
+
+  .dark .bg-yellow-500,
+  .dark .bg-yellow-600,
+  .dark .bg-amber-500,
+  .dark .bg-orange-500,
+  .dark .bg-blue-500,
+  .dark .bg-blue-600,
+  .dark .bg-green-500,
+  .dark .bg-green-600,
+  .dark .bg-red-500,
+  .dark .bg-red-600,
+  .dark .bg-purple-500,
+  .dark .bg-purple-600 {
+    background-color: black !important;
   }
 
   /* Force all backgrounds to be theme appropriate */
   .bg-gray-100,
   .bg-gray-200,
   .bg-gray-300 {
-    background-color: hsl(var(--background)) !important;
+    background-color: white !important;
+  }
+
+  .dark .bg-gray-100,
+  .dark .bg-gray-200,
+  .dark .bg-gray-300 {
+    background-color: black !important;
+  }
+
+  /* Fix button hover states */
+  button:hover {
+    color: white !important;
+    background-color: black !important;
+  }
+
+  .dark button:hover {
+    color: black !important;
+    background-color: white !important;
+  }
+
+  /* Fix link hover states */
+  a:hover {
+    opacity: 0.7;
   }
 
   /* Animations */
