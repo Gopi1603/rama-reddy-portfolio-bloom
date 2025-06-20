@@ -85,21 +85,29 @@ const Header = () => {
         <div className="lg:hidden fixed inset-0 top-16 z-40 mobile-menu">
           <div className="!bg-white dark:!bg-black h-full border-t !border-black dark:!border-white">
             <nav className="p-6 space-y-2 mobile-nav">
-              {navItems.map(({ path, label, icon: Icon }) => (
-                <Link
-                  key={path}
-                  to={path}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className={`flex items-center space-x-3 px-4 py-3 text-base font-medium rounded transition-colors menu-item ${
-                    location.pathname === path
-                      ? '!bg-black !text-white dark:!bg-white dark:!text-black'
-                      : '!bg-transparent !text-black dark:!text-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black'
-                  }`}
-                >
-                  <Icon className="h-5 w-5" />
-                  <span>{label}</span>
-                </Link>
-              ))}
+
+
+
+{navItems.map(({ path, label, icon: Icon }) => (
+  <Link
+    key={path}
+    to={path}
+    onClick={() => setIsMobileMenuOpen(false)}
+    className={`flex items-center space-x-3 px-4 py-3 text-base font-medium rounded transition-colors ${
+      location.pathname === path
+        ? 'bg-black text-white dark:bg-white dark:text-black'
+        : 'text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black'
+    }`}
+  >
+    <Icon className="h-5 w-5" />
+    <span>{label}</span>
+  </Link>
+))}
+
+
+
+
+
             </nav>
           </div>
           <div
