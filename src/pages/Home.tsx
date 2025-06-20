@@ -24,19 +24,19 @@ const Home = () => {
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
-          <Button asChild size="lg" className="px-6 sm:px-8 py-3 text-base font-medium w-full sm:w-auto bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-opacity">
+          <Button asChild size="lg" className="px-6 sm:px-8 py-3 text-base font-medium w-full sm:w-auto bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
             <Link to="/projects">
               <Briefcase className="mr-2 h-5 w-5" />
               View Projects
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="px-6 sm:px-8 py-3 text-base font-medium w-full sm:w-auto border-black text-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+          <Button asChild variant="outline" size="lg" className="px-6 sm:px-8 py-3 text-base font-medium w-full sm:w-auto bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
             <Link to="/contact">
               <Contact className="mr-2 h-5 w-5" />
               Get In Touch
             </Link>
           </Button>
-          <Button asChild variant="outline" size="lg" className="px-6 sm:px-8 py-3 text-base font-medium w-full sm:w-auto border-black text-black dark:border-white dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
+          <Button asChild variant="outline" size="lg" className="px-6 sm:px-8 py-3 text-base font-medium w-full sm:w-auto bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
             <a href="/resume.pdf" download="Rama_Krishna_Reddy_Resume.pdf">
               <Download className="mr-2 h-5 w-5" />
               Download CV
@@ -47,7 +47,7 @@ const Home = () => {
 
       {/* Quick Overview Cards */}
       <section className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 px-4 animate-slide-in-right animation-delay-200">
-        <Card className="text-center bg-white dark:bg-black border-black dark:border-white hover:opacity-80 transition-opacity">
+        <Card className="text-center bg-white dark:bg-black border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
           <CardContent className="p-6 sm:p-8">
             <div className="text-3xl mb-4">⚡</div>
             <h3 className="text-xl font-semibold mb-3 text-black dark:text-white">Salesforce Admin</h3>
@@ -57,7 +57,7 @@ const Home = () => {
           </CardContent>
         </Card>
 
-        <Card className="text-center bg-white dark:bg-black border-black dark:border-white hover:opacity-80 transition-opacity">
+        <Card className="text-center bg-white dark:bg-black border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
           <CardContent className="p-6 sm:p-8">
             <div className="text-3xl mb-4">🐍</div>
             <h3 className="text-xl font-semibold mb-3 text-black dark:text-white">Python Developer</h3>
@@ -67,7 +67,7 @@ const Home = () => {
           </CardContent>
         </Card>
 
-        <Card className="text-center bg-white dark:bg-black border-black dark:border-white hover:opacity-80 transition-opacity">
+        <Card className="text-center bg-white dark:bg-black border border-black dark:border-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
           <CardContent className="p-6 sm:p-8">
             <div className="text-3xl mb-4">🚀</div>
             <h3 className="text-xl font-semibold mb-3 text-black dark:text-white">Problem Solver</h3>
@@ -79,7 +79,7 @@ const Home = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="text-center bg-white dark:bg-black border border-black dark:border-white p-8 sm:p-10 lg:p-12 mx-4 animate-fade-in-up animation-delay-300">
+      <section className="text-center bg-white dark:bg-black border border-black dark:border-white p-8 sm:p-10 lg:p-12 mx-4 hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors animate-fade-in-up animation-delay-300">
         <h2 className="text-xl sm:text-2xl lg:text-3xl font-semibold mb-6 text-black dark:text-white">
           Ready to Collaborate?
         </h2>
@@ -87,7 +87,7 @@ const Home = () => {
           I'm actively seeking opportunities to apply my skills in Salesforce administration 
           and Python development. Let's discuss how I can contribute to your team's success.
         </p>
-        <Button asChild size="lg" className="px-6 sm:px-8 py-3 text-base font-medium bg-black text-white dark:bg-white dark:text-black hover:opacity-80 transition-opacity">
+        <Button asChild size="lg" className="px-6 sm:px-8 py-3 text-base font-medium bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">
           <Link to="/about">
             <User className="mr-2 h-5 w-5" />
             Learn More About Me

@@ -51,7 +51,7 @@
 
 @layer base {
   * {
-    border-color: hsl(var(--border));
+    border-color: hsl(var(--border)) !important;
   }
 
   html {
@@ -64,12 +64,8 @@
     font-family: system-ui, -apple-system, sans-serif;
   }
 
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    color: hsl(var(--foreground)) !important;
-  }
-
-  p, span, div, a {
+  /* Force all text elements to follow theme colors */
+  h1, h2, h3, h4, h5, h6, p, span, div, a, label, button {
     color: hsl(var(--foreground)) !important;
   }
 
@@ -78,12 +74,35 @@
   .text-yellow-600,
   .text-amber-500,
   .text-orange-500,
+  .text-blue-500,
+  .text-blue-600,
+  .text-green-500,
+  .text-green-600,
+  .text-red-500,
+  .text-red-600,
+  .text-purple-500,
+  .text-purple-600,
   .bg-yellow-500,
   .bg-yellow-600,
   .bg-amber-500,
-  .bg-orange-500 {
+  .bg-orange-500,
+  .bg-blue-500,
+  .bg-blue-600,
+  .bg-green-500,
+  .bg-green-600,
+  .bg-red-500,
+  .bg-red-600,
+  .bg-purple-500,
+  .bg-purple-600 {
     color: hsl(var(--foreground)) !important;
     background-color: transparent !important;
+  }
+
+  /* Force all backgrounds to be theme appropriate */
+  .bg-gray-100,
+  .bg-gray-200,
+  .bg-gray-300 {
+    background-color: hsl(var(--background)) !important;
   }
 
   /* Animations */
