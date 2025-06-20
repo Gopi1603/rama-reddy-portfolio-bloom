@@ -52,7 +52,7 @@ const About = () => {
                   <GraduationCap className="h-4 w-4" />
                   Education
                 </h4>
-                <p className="text-sm text-black dark:text-white">Computer Science Graduate</p>
+                <p className="text-sm text-black dark:text-white">Electronics and Communication Graduate , B.tech</p>
               </div>
              <div>
   <h4 className="font-medium flex items-center gap-2 mb-2 text-black dark:text-white">
