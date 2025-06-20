@@ -16,6 +16,43 @@ const Projects = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+                <Card className="flex flex-col bg-white dark:bg-black border border-black dark:border-white">
+          <CardHeader>
+            <CardTitle className="text-lg text-black dark:text-white">SRIVK Pharma Frontend Revamp</CardTitle>
+            <p className="text-sm text-black dark:text-white">
+              Modernizing SRIVK Pharma’s clinical research website with responsive UI and enhanced UX
+            </p>
+          </CardHeader>
+          <CardContent className="flex-1 flex flex-col">
+            <div className="space-y-3 flex-1">
+              <div>
+                <h4 className="font-medium text-sm mb-2 text-black dark:text-white">Technologies</h4>
+                <div className="flex flex-wrap gap-1">
+                  <Badge variant="secondary" className="text-xs bg-white border border-black text-black dark:bg-black dark:border-white dark:text-white">React.js</Badge>
+                  <Badge variant="secondary" className="text-xs bg-white border border-black text-black dark:bg-black dark:border-white dark:text-white">Tailwind CSS</Badge>
+                  <Badge variant="secondary" className="text-xs bg-white border border-black text-black dark:bg-black dark:border-white dark:text-white">Responsive Design</Badge>
+                </div>
+              </div>
+              
+              <div>
+                <h4 className="font-medium text-sm mb-2 text-black dark:text-white">Key Features</h4>
+                <ul className="text-sm text-black dark:text-white space-y-1">
+                  <li>• Mobile-first responsive layout for tablet and desktop</li>
+                  <li>• Clean, accessible components for Services & About pages</li>
+                  <li>•  Interactive navigation for Services sections</li>
+                  <li>• Performance enhancements: image optimization and lazy loading</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div className="flex gap-2 mt-4">
+              <Button size="sm" className="flex-1 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">View Details</Button>
+              <Button size="sm" variant="outline" className="flex-1 bg-white border border-black text-black hover:bg-black hover:text-white dark:bg-black dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black transition-colors">GitHub</Button>
+            </div>
+          </CardContent>
+        </Card>
+
+
         <Card className="flex flex-col bg-white dark:bg-black border border-black dark:border-white">
           <CardHeader>
             <CardTitle className="text-lg flex items-center gap-2 text-black dark:text-white">
@@ -149,15 +186,16 @@ const Projects = () => {
                 <li>• User training materials</li>
               </ul>
             </div>
-            <div>
-              <h4 className="font-medium mb-3 text-black dark:text-white">Python Projects</h4>
+                        <div>
+              <h4 className="font-medium mb-3 text-black dark:text-white">Frontend Projects</h4>
               <ul className="space-y-2 text-sm text-black dark:text-white">
-                <li>• Web applications and chatbots</li>
-                <li>• Automation and scripting tools</li>
-                <li>• Data analysis and processing</li>
-                <li>• API integrations and web scraping</li>
+                <li>•  Clinical website UI revamp (SRIVK Pharma)</li>
+                <li>• Responsive layout & accessibility focus</li>
+                <li>• React.js, Tailwind CSS, Next.js integration</li>
+                <li>• Performance-optimized frontend builds</li>
               </ul>
             </div>
+
           </div>
         </CardContent>
       </Card>

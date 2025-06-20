@@ -51,28 +51,28 @@ const Skills = () => {
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-black dark:text-white">
               <Code className="h-5 w-5 text-black dark:text-white" />
-              Python Development
+              Frontend Developer
             </CardTitle>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div>
-                <h4 className="font-medium mb-2 text-black dark:text-white">Core Python</h4>
+                <h4 className="font-medium mb-2 text-black dark:text-white">Core Skills</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Object-Oriented Programming</Badge>
-                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Data Structures</Badge>
-                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">File Handling</Badge>
-                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Error Handling</Badge>
-                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Web Scraping</Badge>
+                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white"> HTML5, CSS3</Badge>
+                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Core JavaScript (ES6+)</Badge>
+                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">DOM Manipulation</Badge>
+                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Responsive Design</Badge>
+                  <Badge variant="secondary" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white"> Accessibility (a11y)</Badge>
                 </div>
               </div>
               <div>
                 <h4 className="font-medium mb-2 text-black dark:text-white">Libraries & Frameworks</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Django</Badge>
-                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Flask</Badge>
-                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Pandas</Badge>
-                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Requests</Badge>
+                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white"> React.js</Badge>
+                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Next.js (SSR & SSG)</Badge>
+                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Tailwind CSS</Badge>
+                  <Badge variant="outline" className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white">Headless UI</Badge>
                 </div>
               </div>
             </div>
