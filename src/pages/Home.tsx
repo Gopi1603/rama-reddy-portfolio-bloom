@@ -37,7 +37,7 @@ const Home = () => {
             </Link>
           </Button>
           <Button asChild variant="outline" size="lg" className="px-6 sm:px-8 py-3 text-base font-medium w-full sm:w-auto !bg-white !border !border-black !text-black hover:!bg-black hover:!text-white dark:!bg-black dark:!border-white dark:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors">
-            <a href="/resume.pdf" download="Rama_Krishna_Reddy_Resume.pdf">
+            <a href="https://drive.google.com/file/d/1v9vitlUacvuvqeJTv9Vvg6wNMZed5MaN/view?usp=sharing" download="Rama_Krishna_Reddy_Resume.pdf">
               <Download className="mr-2 h-5 w-5" />
               Download CV
             </a>
