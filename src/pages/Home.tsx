@@ -15,7 +15,7 @@ const Home = () => {
             Pedaviti Rama Krishna Reddy
           </h1>
           <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl !text-black dark:!text-white font-medium">
-            Aspiring Salesforce Admin & Python Developer
+            Aspiring Salesforce Admin & Frontend Developer
           </p>
           <p className="text-base sm:text-lg !text-black dark:!text-white max-w-3xl mx-auto">
             Passionate about automation, data management, and building efficient solutions 
@@ -57,15 +57,16 @@ const Home = () => {
           </CardContent>
         </Card>
 
-        <Card className="text-center !bg-white dark:!bg-black !border !border-black dark:!border-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors group">
-          <CardContent className="p-6 sm:p-8">
-            <div className="text-3xl mb-4">🐍</div>
-            <h3 className="text-xl font-semibold mb-3 !text-black dark:!text-white group-hover:!text-white dark:group-hover:!text-black">Python Developer</h3>
-            <p className="!text-black dark:!text-white group-hover:!text-white dark:group-hover:!text-black">
-              Building automation tools and data-driven applications
-            </p>
-          </CardContent>
-        </Card>
+       <Card className="text-center !bg-white dark:!bg-black !border !border-black dark:!border-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors group">
+  <CardContent className="p-6 sm:p-8">
+    <div className="text-3xl mb-4">🌐</div>
+    <h3 className="text-xl font-semibold mb-3 !text-black dark:!text-white group-hover:!text-white dark:group-hover:!text-black">Frontend Developer</h3>
+    <p className="!text-black dark:!text-white group-hover:!text-white dark:group-hover:!text-black">
+      Creating responsive and user-friendly interfaces
+    </p>
+  </CardContent>
+</Card>
+
 
         <Card className="text-center !bg-white dark:!bg-black !border !border-black dark:!border-white hover:!bg-black hover:!text-white dark:hover:!bg-white dark:hover:!text-black transition-colors group">
           <CardContent className="p-6 sm:p-8">
