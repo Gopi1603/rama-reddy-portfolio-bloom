@@ -96,7 +96,7 @@ const Contact = () => {
               <Mail className="h-4 w-4 text-black dark:text-white" />
               <div>
                 <h4 className="font-medium text-black dark:text-white">Email</h4>
-                <p className="text-black dark:text-white break-all">pedavitiramakrihsna@gmail.com</p>
+                <p className="text-black dark:text-white break-all">rk4053727@gmail.com</p>
               </div>
             </div>
             
@@ -104,7 +104,7 @@ const Contact = () => {
               <Phone className="h-4 w-4 text-black dark:text-white" />
               <div>
                 <h4 className="font-medium text-black dark:text-white">Phone</h4>
-                <p className="text-black dark:text-white">+91 XXXXX XXXXX</p>
+                <p className="text-black dark:text-white">+91 96183 41328</p>
               </div>
             </div>
             
@@ -112,7 +112,7 @@ const Contact = () => {
               <MapPin className="h-4 w-4 text-black dark:text-white" />
               <div>
                 <h4 className="font-medium text-black dark:text-white">Location</h4>
-                <p className="text-black dark:text-white">India</p>
+                <p className="text-black dark:text-white">Khammam,Telangana,India.</p>
               </div>
             </div>
             
@@ -120,7 +120,7 @@ const Contact = () => {
               <Linkedin className="h-4 w-4 text-black dark:text-white" />
               <div>
                 <h4 className="font-medium text-black dark:text-white">LinkedIn</h4>
-                <p className="text-black dark:text-white break-all">linkedin.com/in/pedaviti-rama-krishna</p>
+                <p className="text-black dark:text-white break-all">https://www.linkedin.com/in/rama-krishna-reddy-717b82248/</p>
               </div>
             </div>
             
@@ -128,7 +128,7 @@ const Contact = () => {
               <Github className="h-4 w-4 text-black dark:text-white" />
               <div>
                 <h4 className="font-medium text-black dark:text-white">GitHub</h4>
-                <p className="text-black dark:text-white break-all">github.com/pedavitiramakrihsna</p>
+                <p className="text-black dark:text-white break-all">https://github.com/Ramakrishna18code</p>
               </div>
             </div>
           </CardContent>
@@ -170,7 +170,7 @@ const Contact = () => {
                 <Input 
                   id="email" 
                   type="email" 
-                  placeholder="your.email@example.com"
+                  placeholder="rk4053727@gmail.com"
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   className="bg-white dark:bg-black border border-black dark:border-white text-black dark:text-white placeholder:text-black/50 dark:placeholder:text-white/50"
