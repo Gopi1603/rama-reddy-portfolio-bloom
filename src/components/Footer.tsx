@@ -18,14 +18,14 @@ const Footer = () => {
           
           <div className="flex items-center space-x-6">
             <a
-              href="mailto:ramakrishnareddy.pedaviti@gmail.com"
+              href="mailto:rk4053727@gmail.com"
               className="flex items-center space-x-2 text-black dark:text-white hover:opacity-70 transition-opacity"
             >
               <Mail className="h-4 w-4" />
               <span className="text-sm">Email</span>
             </a>
             <a
-              href="https://linkedin.com/in/rama-krishna-reddy-pedaviti"
+              href="https://www.linkedin.com/in/rama-krishna-reddy-717b82248/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 text-black dark:text-white hover:opacity-70 transition-opacity"
